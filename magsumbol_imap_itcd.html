@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth</title>
+    <script language="javascript">
+        function writeText(txt){
+            document.getElementById("desc").innerHTML=txt;
+        }
+
+        function dissolveText(txt){
+            document.getElementById("desc").innerHTML=txt;
+        }
+    </script>
+    <base target="newSpace">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Montserrat:wght@400;700&family=Poppins:ital,wght@0,400;0,700;1,600&family=Raleway:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        h1,
+        p {
+            color: white;
+        }
+
+        h1 {
+            font-family: poppins;
+            text-align: center;
+        }
+
+        body {
+            background-color: rgb(32, 32, 32);
+        }
+
+        p {
+            font-family: montserrat;
+            padding-top: 50px;
+            line-height: 25px;
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        img {
+            margin: 0 auto;
+            display:block;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>The Solar System</h1>
+    <img src="sample_image.jpeg" alt="" usemap="#solarSystem">
+    <map name="solarSystem" id="solarSystem">
+
+        <area shape="rect" coords="32, 229, 152, 345 " href="earth.html" alt="" 
+        onmouseover="writeText('Our home planet is the third planet from the Sun, and the only place we know of so far that’s inhabited by living things.');"
+        onmouseout="writeText('')";>
+
+        <area shape="circle" coords="289, 73, 46 " href="uranus.html" alt=""
+        onmouseover="writeText('Uranus is the seventh planet from the Sun. Its name is a reference to the Greek god of the sky.');"
+        onmouseout="writeText('');"
+        >
+        <area shape="poly" coords="210, 374, 221, 394, 210, 413, 187, 413, 176, 392, 188, 374" href="mercury.html" alt=""
+        onmouseover="writeText('The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth\'s Moon.');"
+        onmouseout="writeText('');">
+    </map>
+    <p id="desc"></p>
+</body>
+
+</html>
